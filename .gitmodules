@@ -1,0 +1,4 @@
+[submodule "nvim"]
+	path = nvim
+	url = git@github.com:Haythem-Zd/nvim.git
+	branch = haythem

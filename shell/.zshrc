@@ -20,11 +20,10 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source ~/.cofig/aliases/basics.sh
-source ~/.cofig/aliases/extra.sh
-[[ -f ~/.cofig/aliases/work.sh ]] && source ~/.cofig/aliases/work.sh
+source ~/.dotfiles/aliases/basics.sh
+source ~/.dotfiles/aliases/extra.sh
+[[ -f ~/work-aliases.sh ]] && source ~/work-aliases.sh
 
-#Load Antigen
-source ~/.config/antigen.zsh
-# Load Antigen configurations
-antigen init ~/.config/.antigenrc
+#Load Antidote
+source ~/.antidote/antidote.zsh
+antidote load

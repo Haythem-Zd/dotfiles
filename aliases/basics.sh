@@ -1,3 +1,4 @@
+export EDIROR='nvim'
 alias z='zsh'
 alias v='nvim'
 alias c='clear'
@@ -21,20 +22,19 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias .-='cd -'
-mkcd() { mkdir -p "$1" && cd "$1"; } 
-cx() { cd "$@" && l; }
-fcd() { cd "$(find . -type d -not -path '*/.*' | fzf)" && l; }
-f() { echo "$(find . -type f -not -path '*/.*' | fzf)" | pbcopy; }
-fv() { nvim "$(find . -type f -not -path '*/.*' | fzf)" }
-
+alias tmp='cd /tmp'
 alias ginr='grep -Inr'
 alias agi='ag -i'
 alias agw='ag -w'
 alias fd='fdfind'
 
+export_from_file() {
+  set -o allexport; source "$1"; set +o allexport;
+} 
+mkcd() {
+  mkdir -p "$1" && cd "$1";
+} 
 mine() {
-  sudo chown -R $USERNAME "$1"
+  sudo chown -R $USERNAME "$1";
 }
-export_from_file() { set -o allexport; source "$1"; set +o allexport;} 
-export EDIROR='nvim'
 

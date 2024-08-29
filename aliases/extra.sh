@@ -20,14 +20,14 @@ alias glc="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %
 
 # use gh cli and fzf to get a list with preview of PRs in current directory
 function ghpr() {
-  GH_FORCE_TTY=100% gh pr list | fzf --query "$1" --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout  
+  GH_FORCE_TTY=100% gh pr list | fzf --query "$1" --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout;
 }
 
 function retag(){
     git tag -d "$1";
     git push --delete origin "$1";
     git tag -m "$1" "$1";
-    git push origin "$1" 
+    git push origin "$1" ;
 }
 function deltag(){
     git tag -d "$1";
@@ -43,19 +43,16 @@ alias f='fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'
 
 alias bathelp='bat --plain --language=help'
 help() {
-    "$@" --help 2>&1 | bathelp
+    "$@" --help 2>&1 | bathelp;
 } # to be used like this : $ help git, $ help ls...
 
 
 printfunc() {
-    type -f "$1" | bat --plain --language=bash
+    type -f "$1" | bat --plain --language=bash;
 }
 
 ################ Docker stuff ########################
-alias dco="docker compose"
-alias dps="docker ps"
-alias dpa="docker ps -a"
-alias dl="docker ps -l -q"
+alias dps='docker ps --format "{{.Names}}\t{{.Image}}\t{{.Ports}}"'
 alias dim='docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.Size}}"'
 alias drm='docker rmi -f'
 dx() {
@@ -64,8 +61,9 @@ dx() {
 
 #################################################
 alias server='python3 -m http.server 1990'
-alias tmp='cd /tmp'
 alias ktrc='nvim ~/.config/kitty/kitty.conf'
+alias nvrc='nvim ~/.config/nvim'
+alias ks='killall ssh'
 # cmake CPM
 export CPM_SOURCE_CACHE=$HOME/.cache/CPM
 

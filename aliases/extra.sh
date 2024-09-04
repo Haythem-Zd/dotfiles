@@ -36,10 +36,11 @@ function deltag(){
 
 ################# tricks with fzf and bat ####################
 
+export PATH="$HOME/bin:$PATH"
 
 # bat related aliases
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-alias f='fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}''
+alias f="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 alias bathelp='bat --plain --language=help'
 help() {

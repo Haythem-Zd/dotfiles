@@ -15,6 +15,11 @@ alias x='exa -lah'
 alias cl='colorls'
 alias cll='colorls -lah'
 
+alias dotfiles='nvim ~/.dotfiles/'
+alias bashrc='nvim ~/.dotfiles/shell/.bashrc'
+alias zshrc='nvim ~/.dotfiles/shell/.zshrc'
+alias vv='nvim .'
+
 alias ..='cd ..'
 alias .1='cd ..'
 alias .2='cd ../..'
@@ -32,9 +37,9 @@ export_from_file() {
   set -o allexport; source "$1"; set +o allexport;
 } 
 mkcd() {
-  mkdir -p "$1" && cd "$1";
+  mkdir -p "$1" && cd "$1" || exit;
 } 
 mine() {
-  sudo chown -R $USERNAME "$1";
+  sudo chown -R "$USERNAME" "$1";
 }
 

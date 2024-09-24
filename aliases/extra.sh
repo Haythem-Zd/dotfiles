@@ -36,7 +36,7 @@ function deltag(){
 
 ################# tricks with fzf and bat ####################
 
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 # bat related aliases
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"

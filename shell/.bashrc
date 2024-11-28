@@ -14,6 +14,7 @@ OSH_THEME="ht"
 OMB_USE_SUDO=true
 # To enable/disable display of Python virtualenv and condaenv
 OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
+DISABLE_UPDATE_PROMPT=true
 
 source "$OSH"/oh-my-bash.sh
 

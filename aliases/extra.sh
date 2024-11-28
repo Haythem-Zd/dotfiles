@@ -42,7 +42,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 alias f="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
-alias bathelp='bat --plain --language=help'
+alias bathelp='bat --plain --language=Manpage'
 help() {
     "$@" --help 2>&1 | bathelp;
 } # to be used like this : $ help git, $ help ls...

@@ -11,6 +11,7 @@ alias gts='git status'
 alias gtb='git branch'
 alias grh='git reset --hard'
 alias gdf='git diff'
+alias gdff='GIT_EXTERNAL_DIFF=difft git diff'
 alias gtk='gitk --all'
 alias gog="git log  --abbrev-commit --name-status --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias gll='git log --oneline'

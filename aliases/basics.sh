@@ -3,6 +3,7 @@ alias z='zsh'
 alias v='nvim'
 alias c='clear'
 alias p='pwd'
+alias h='htop'
 alias rp='realpath'
 alias rr='ranger'
 
@@ -41,5 +42,8 @@ mkcd() {
 } 
 mine() {
   sudo chown -R "$USERNAME" "$1";
+}
+psm() {
+	ps -fu $USER;
 }
 

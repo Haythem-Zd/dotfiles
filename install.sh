@@ -60,8 +60,9 @@ sudo usermod -aG docker $USER
 
 # More packages
 sudo apt-get -qq install -y silversearcher-ag \
-							exa \
+							eza \
 							fd-find \
+							silversearcher-ag \
 							ranger \
 							jq \
 							bat \

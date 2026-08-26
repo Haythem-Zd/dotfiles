@@ -33,6 +33,7 @@ alias ginr='grep -Inr'
 alias agi='ag -i'
 alias agw='ag -w'
 alias fd='fdfind'
+alias duh='du -skh * | grep -e G -e T'
 
 export_from_file() {
   set -o allexport; source "$1"; set +o allexport;
